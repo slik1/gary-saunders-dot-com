@@ -1,21 +1,27 @@
-import { Component, ViewEncapsulation, AfterViewInit, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, AfterViewInit, ElementRef, ViewChild,OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ThemePalette } from '@angular/material/core';
-import { MatIconRegistry } from "@angular/material/icon";
-import { DomSanitizer } from "@angular/platform-browser";
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
-// import { Howl } from "howler";
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-  imports: [],
-  styleUrl: './app.component.scss',
+  imports: [CommonModule, HttpClientModule, MatSidenavModule, MatIconModule, MatListModule, MatToolbarModule, MatSlideToggleModule, FormsModule],
+  styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 
-
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit  {
   title = 'my-site';
   opened!: boolean; 
   showMonster = false;

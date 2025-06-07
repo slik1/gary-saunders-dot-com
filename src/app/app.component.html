@@ -20,8 +20,8 @@
 
     <mat-toolbar>
 
-      <nav wmAnimate="fadeInDown" speed="medium" aos>
-        <a (mouseenter)="hoverSound.play()" id="logo" href="#" (click)="scrollToSection('landing');secretCode($event)">
+      <nav>
+        <a id="logo" href="#" (click)="scrollToSection('landing');secretCode()">
           <svg xmlns="http://www.w3.org/2000/svg" width="67" height="47" viewBox="0 0 67 47">
             <g id="Group_49" data-name="Group 49" transform="translate(-7 -10)">
               <g id="border-effect" data-name="Rectangle 292" transform="translate(7 10)" fill="none" stroke="#52ff12"
@@ -40,17 +40,17 @@
 
         <div class="nav__styled-links">
 
-          <a href="#" (mouseenter)="hoverSound.play()" (click)="scrollToSection('about-anchor')">About</a>
-          <a href="#" (mouseenter)="hoverSound.play()" (click)="scrollToSection('work-anchor')">Work</a>
-          <a href="#" (mouseenter)="hoverSound.play()" (click)="scrollToSection('projects-anchor')">Projects</a>
-          <a href="#" (mouseenter)="hoverSound.play()" (click)="scrollToSection('praises-anchor')">Praises</a>
-          <a href="#" (mouseenter)="hoverSound.play()" (click)="scrollToSection('contact-anchor')">Contact</a>
-          <a (mouseenter)="hoverSound.play()" (click)="clickSound.play()" target="_blank"
+          <a href="#" (click)="scrollToSection('about-anchor')">About</a>
+          <a href="#" (click)="scrollToSection('work-anchor')">Work</a>
+          <a href="#" (click)="scrollToSection('projects-anchor')">Projects</a>
+          <a href="#" (click)="scrollToSection('praises-anchor')">Praises</a>
+          <a href="#" (click)="scrollToSection('contact-anchor')">Contact</a>
+          <a target="_blank"
             href="http://www.garysaunders.com/pdf/gary-saunders-resume.pdf" mat-stroked-button
             class="stroked-green" color="accent">DOWNLOAD RESUME</a>
         </div>
 
-        <div *ngIf="showSecret" id="beast-mode-toggle" wmAnimate="fadeIn" aos=0.1 once speed="slow">
+        <div *ngIf="showSecret" id="beast-mode-toggle">
           <mat-slide-toggle class="monster-mode-toggle" color="primary" [checked]="checked" [(ngModel)]="checked"
             (change)="changed()" [disabled]="disabled">
             <mat-icon>music_note</mat-icon>
@@ -72,11 +72,11 @@
 
 
     <div id="landing"></div>
-    <div class="main-container" [ngClass]="{'active': checked}" wmAnimateView top="20vh">
+    <div class="main-container" [ngClass]="{'active': checked}" top="20vh">
 
       <div class="main-inner">
 
-        <div class="big-textbox" [wmAnimate]="isMobile ? 'bounceIn' : 'landing'" speed="fast" aos>
+        <div class="big-textbox" speed="fast" aos>
           <h1>
             Gary <br>Saunders
           </h1>
@@ -88,10 +88,10 @@
 
 
 
-        <section id="about" wmAnimate="fadeIn" speed="fast" aos=0.2>
+        <section id="about">
           <div id="about-anchor" class="scroll-to-anchor"></div>
 
-          <app-about></app-about>
+          <!-- <app-about></app-about> -->
 
         </section>
 
@@ -99,26 +99,26 @@
 
         <section id="work">
           <div id="work-anchor" class="scroll-to-anchor"></div>
-          <app-work></app-work>
+          <!-- <app-work></app-work> -->
         </section>
 
 
 
         <section id="projects">
           <div id="projects-anchor" class="scroll-to-anchor"></div>
-          <app-projects></app-projects>
+          <!-- <app-projects></app-projects> -->
         </section>
 
 
         <section id="praises">
           <div id="praises-anchor" class="scroll-to-anchor"></div>
-          <app-praises></app-praises>
+          <!-- <app-praises></app-praises> -->
         </section>
 
 
-        <section id="contact" wmAnimate="bounceInUp" aos=0.1 once>
+        <section id="contact">
           <div id="contact-anchor" class="scroll-to-anchor"></div>
-          <app-contact></app-contact>
+          <!-- <app-contact></app-contact> -->
         </section>
 
 
@@ -139,15 +139,15 @@
 
 
       <div class="social-i-guess">
-        <a (mouseenter)="hoverSound.play()" [wmAnimate]="isMobile ? 'bounceIn' : 'fadeIn'" speed="slow" aos=0.1
+        <a
           target="_blank" href="https://www.linkedin.com/in/gary-saunders-sd/">
           <mat-icon svgIcon="icon_linkedin"></mat-icon>
         </a>
-        <a (mouseenter)="hoverSound.play()" [wmAnimate]="isMobile ? 'bounceIn' : 'fadeIn'" speed="slow" aos=0.1
+        <a
           target="_blank" href="https://github.com/slik1">
           <mat-icon svgIcon="icon_github"></mat-icon>
         </a>
-        <a (mouseenter)="hoverSound.play()" [wmAnimate]="isMobile ? 'bounceIn' : 'fadeIn'" speed="slow" aos=0.1
+        <a
           target="_blank" href="https://soundcloud.com/g-slik">
           <mat-icon svgIcon="icon_soundcloud"></mat-icon>
         </a>
