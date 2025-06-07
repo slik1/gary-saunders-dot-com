@@ -15,6 +15,31 @@ body {
   line-height: 1.65;
 }
 
+:root{
+  --mat-toolbar-title-text-font: "Poppins", sans-serif;
+  --mat-toolbar-text-font: "Poppins", sans-serif;
+  --mat-button-text-font: "Poppins", sans-serif;
+  --mat-button-icon-font: "Poppins", sans-serif;
+  --mat-button-label-text-font: "Poppins", sans-serif;
+  --mat-button-label-text-font-weight: 500;
+
+      --mdc-text-button-label-text-font: "Poppins", sans-serif;
+    --mdc-text-button-label-text-size: 14px;
+    --mdc-text-button-label-text-tracking: .5px;
+    --mdc-text-button-label-text-weight: 500;
+    --mdc-text-button-label-text-transform: none;
+    --mdc-filled-button-label-text-font: "Poppins", sans-serif;
+    --mdc-filled-button-label-text-size: 14px;
+    --mdc-filled-button-label-text-tracking: .5px;
+    --mdc-filled-button-label-text-weight: 500;
+    --mdc-filled-button-label-text-transform: none;
+    --mdc-outlined-button-label-text-font: "Poppins", sans-serif;
+    --mdc-outlined-button-label-text-size: 14px;
+    --mdc-outlined-button-label-text-tracking: .5px;
+    --mdc-outlined-button-label-text-weight: 500;
+    --mdc-outlined-button-label-text-transform: none;
+}
+
 h1 {
   margin-top: 0;
   font-size: 3.052rem; //48.83px

@@ -11,12 +11,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, MatSidenavModule, MatIconModule, MatListModule, MatToolbarModule, MatSlideToggleModule, FormsModule],
+  imports: [CommonModule, HttpClientModule, MatSidenavModule, MatIconModule, MatListModule, MatToolbarModule, MatSlideToggleModule, FormsModule, MatButtonModule],
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })

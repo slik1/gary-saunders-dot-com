@@ -348,18 +348,31 @@ app-root {
   }
 }
 
-.mat-stroked-button {
-  &.stroked-green {
-    border-color: var(--color-light-green);
+.mat-mdc-outlined-button {
+    &.stroked-green {
+    border-color: var(--color-light-green) !important;
     font-weight: bold;
     border-width: 2px;
   }
   &.stroked-purple {
-    border-color: var(--color-purple);
+    border-color: var(--color-purple) !important;
     background-color: rgba(79, 52, 90, 0.2);
     font-weight: bold;
   }
 }
+
+// .mat-stroked-button {
+//   &.stroked-green {
+//     border-color: var(--color-light-green);
+//     font-weight: bold;
+//     border-width: 2px;
+//   }
+//   &.stroked-purple {
+//     border-color: var(--color-purple);
+//     background-color: rgba(79, 52, 90, 0.2);
+//     font-weight: bold;
+//   }
+// }
 
 mat-sidenav button.mat-icon-button {
   position: absolute;
