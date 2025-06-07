@@ -1,4 +1,231 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/vars";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+  font-size: 100%; //16px
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #3b3b3b;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem; //48.83px
+}
+
+h2 {
+  font-size: 2.441rem; //39.06px
+}
+
+h3 {
+  font-size: 1.953rem; //31.25px
+  @media screen and (max-width: 600px) {
+    font-size: 1.6rem;
+  }
+}
+
+h4 {
+  font-size: 1.563rem; //25px
+  @media screen and (max-width: 600px) {
+    font-size: 1.2rem;
+  }
+}
+
+h5 {
+  font-size: 1.25rem; //20px
+}
+
+small,
+.text_small {
+  font-size: 0.8rem; //12.8px
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: var(--font-size-lg); //20px
+  @media screen and (max-width: 850px) {
+    font-size: var(--font-size-md); //16px
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-purple);
+
+  &:hover {
+    //color: darken(var(--color-light-green), 20);
+    color: lighten(#4f345a, 20) !important;
+    svg {
+      fill: lighten(#4f345a, 20) !important;
+    }
+  }
+}
+
+.section-heading {
+  line-height: 1.3;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  margin-bottom: 0;
+  @media screen and (max-width: 480px){
+    line-height: 1;
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    border: 6px solid var(--color-light-green);
+    position: absolute;
+    top: -29px;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    left: -20px;
+    z-index: -1;
+    @media screen and (max-width: 480px) {
+      content: "";
+      display: inline-block;
+      border: 6px solid var(--color-light-green);
+      position: absolute;
+      top: -20px;
+      width: 96%;
+      height: 78%;
+      border-radius: 6px;
+      left: -14px;
+      z-index: -1;
+    }
+  }
+}
+
+.popout-border {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+
+  &.top-right {
+    &:before {
+      content: "";
+      display: inline-block;
+      border: 6px solid var(--color-light-green);
+      position: absolute;
+      top: -30px;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      right: -30px;
+      z-index: -1;
+    }
+  }
+
+  &.top-left {
+    &:before {
+      content: "";
+      display: inline-block;
+      border: 6px solid var(--color-light-green);
+      position: absolute;
+      top: -30px;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      left: -30px;
+      z-index: -1;
+    }
+  }
+}
+
+.main-container .main-inner {
+  max-width: 1088px;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  background: url("../src/assets/props.svg");
+  background-repeat: no-repeat;
+  background-size: 170px auto;
+  background-position: 80% bottom;
+
+  @media screen and (max-width: 690px) {
+    background-size: 100px auto;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+section {
+  margin-bottom: 26rem;
+  &:last-of-type {
+    margin-bottom: 7rem;
+  }
+  @media screen and (max-width: 850px) {
+    margin-bottom: 20rem;
+    &:last-of-type {
+      margin-bottom: 6rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10rem;
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+  }
+  .inner {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 4rem;
+    @media screen and (max-width: 850px) {
+      grid-template-columns: 100%;
+      row-gap: 4rem;
+    }
+    @media screen and (max-width: 480px) {
+      row-gap: 3rem;
+    }
+  }
+}
+
+.props {
+  font-size: var(--font-size-small);
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  &:hover{
+    background: url('./assets/hover-secret.svg');
+    background-repeat: no-repeat;
+    background-size: 170px auto;
+    background-position: 78% top;
+  }
+  @media screen and (max-width: 1100px) {
+    justify-content: flex-start;
+    padding-right: 150px;
+  }
+  @media screen and (max-width: 1100px) {
+    &:hover{
+      background-position: 84% 45%;
+    }
+  }
+}
+
+.main-inner > section {
+  position: relative;
+  .scroll-to-anchor {
+    position: absolute;
+    top: -100px;
+    left: 0;
+  }
+}
+
+#landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

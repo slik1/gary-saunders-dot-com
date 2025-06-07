@@ -1,0 +1,12 @@
+.about__pic{
+    width: 350px;
+    max-width: calc(100% - 30px);
+    align-self: start;
+    position: sticky;
+    top: 100px;
+
+    img{
+        width: 100%;
+        border-radius: 5px;
+    }
+}
